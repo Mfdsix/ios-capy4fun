@@ -78,9 +78,7 @@ struct FavoriteView: View {
             }
         }
         .onAppear {
-            if self.presenter.capybaras.count == 0 {
-                self.presenter.getCapybaras()
-            }
+            self.presenter.getCapybaras()
         }
         .navigationBarTitle(
             Text("My Favs"),

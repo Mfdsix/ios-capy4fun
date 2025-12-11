@@ -61,10 +61,8 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            if self.presenter.capybaras.count == 0 {
-                Task {
-                    self.presenter.getCapybaras()
-                }
+            Task {
+                self.presenter.getCapybaras()
             }
         }
     }
