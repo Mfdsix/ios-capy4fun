@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C141FDE32EE7C1050034E9FD /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C141FDE22EE7C1050034E9FD /* CachedAsyncImage */; };
-		C141FDE62EE7C1A10034E9FD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C141FDE52EE7C1A10034E9FD /* SDWebImageSwiftUI */; };
-		C1463D082EE878D700DB9498 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C1463D072EE878D700DB9498 /* RxBlocking */; };
-		C1C66FA72EE7459F00A7B2DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1C66FA62EE7459F00A7B2DD /* Alamofire */; };
-		C1C66FAE2EE7460200A7B2DD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C1C66FAD2EE7460200A7B2DD /* RxCocoa */; };
-		C1C66FB02EE7460200A7B2DD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1C66FAF2EE7460200A7B2DD /* RxSwift */; };
-		C1C66FCC2EE74D6B00A7B2DD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1C66FCB2EE74D6B00A7B2DD /* RealmSwift */; };
+		C1FA209D2EEDA93D00CC79AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209C2EEDA93D00CC79AD /* RxCocoa */; };
+		C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209E2EEDA93D00CC79AD /* RxSwift */; };
+		C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */; };
+		C1FA20A52EEDA96000CC79AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A42EEDA96000CC79AD /* Alamofire */; };
+		C1FA20A82EEDA98800CC79AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A72EEDA98800CC79AD /* RealmSwift */; };
+		C1FA20AE2EEDB38B00CC79AD /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */; };
+		C1FA20B22EEDC0F100CC79AD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B12EEDC0F100CC79AD /* RxTest */; };
+		C1FA20B52EEDC10D00CC79AD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B42EEDC10D00CC79AD /* RxBlocking */; };
+		C1FA20B72EEDC25000CC79AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */; };
+		C1FA20B92EEDC25A00CC79AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B82EEDC25A00CC79AD /* Realm */; };
+		C1FA20BC2EEDC26700CC79AD /* Realm in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B82EEDC25A00CC79AD /* Realm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,19 +28,25 @@
 			remoteGlobalIDString = C1C66F5F2EE744FD00A7B2DD;
 			remoteInfo = Capy4Fun;
 		};
-		C1C66F812EE744FF00A7B2DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1C66F582EE744FD00A7B2DD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1C66F5F2EE744FD00A7B2DD;
-			remoteInfo = Capy4Fun;
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1FA20BB2EEDC25A00CC79AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C1FA20BC2EEDC26700CC79AD /* Realm in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capy4Fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C66F762EE744FF00A7B2DD /* Capy4FunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capy4FunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1C66F802EE744FF00A7B2DD /* Capy4FunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capy4FunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -47,6 +57,13 @@
 			);
 			target = C1C66F5F2EE744FD00A7B2DD /* Capy4Fun */;
 		};
+		C1FA20BE2EEDC33000CC79AD /* Exceptions for "Capy4Fun" folder in "Capy4FunTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Core/Domain/Model/CapybaraModel.swift,
+			);
+			target = C1C66F752EE744FF00A7B2DD /* Capy4FunTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -54,6 +71,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				C1C66F882EE744FF00A7B2DD /* Exceptions for "Capy4Fun" folder in "Capy4Fun" target */,
+				C1FA20BE2EEDC33000CC79AD /* Exceptions for "Capy4Fun" folder in "Capy4FunTests" target */,
 			);
 			path = Capy4Fun;
 			sourceTree = "<group>";
@@ -70,12 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C141FDE62EE7C1A10034E9FD /* SDWebImageSwiftUI in Frameworks */,
-				C1C66FCC2EE74D6B00A7B2DD /* RealmSwift in Frameworks */,
-				C141FDE32EE7C1050034E9FD /* CachedAsyncImage in Frameworks */,
-				C1C66FB02EE7460200A7B2DD /* RxSwift in Frameworks */,
-				C1C66FAE2EE7460200A7B2DD /* RxCocoa in Frameworks */,
-				C1C66FA72EE7459F00A7B2DD /* Alamofire in Frameworks */,
+				C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */,
+				C1FA20A52EEDA96000CC79AD /* Alamofire in Frameworks */,
+				C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */,
+				C1FA20AE2EEDB38B00CC79AD /* CachedAsyncImage in Frameworks */,
+				C1FA20A82EEDA98800CC79AD /* RealmSwift in Frameworks */,
+				C1FA209D2EEDA93D00CC79AD /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,14 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1463D082EE878D700DB9498 /* RxBlocking in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1C66F7D2EE744FF00A7B2DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C1FA20B72EEDC25000CC79AD /* SDWebImageSwiftUI in Frameworks */,
+				C1FA20B22EEDC0F100CC79AD /* RxTest in Frameworks */,
+				C1FA20B92EEDC25A00CC79AD /* Realm in Frameworks */,
+				C1FA20B52EEDC10D00CC79AD /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +116,7 @@
 			children = (
 				C1C66F622EE744FD00A7B2DD /* Capy4Fun */,
 				C1C66F792EE744FF00A7B2DD /* Capy4FunTests */,
+				C1FA20B32EEDC10D00CC79AD /* Frameworks */,
 				C1C66F612EE744FD00A7B2DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,9 +126,15 @@
 			children = (
 				C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */,
 				C1C66F762EE744FF00A7B2DD /* Capy4FunTests.xctest */,
-				C1C66F802EE744FF00A7B2DD /* Capy4FunUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C1FA20B32EEDC10D00CC79AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,12 +158,12 @@
 			);
 			name = Capy4Fun;
 			packageProductDependencies = (
-				C1C66FA62EE7459F00A7B2DD /* Alamofire */,
-				C1C66FAD2EE7460200A7B2DD /* RxCocoa */,
-				C1C66FAF2EE7460200A7B2DD /* RxSwift */,
-				C1C66FCB2EE74D6B00A7B2DD /* RealmSwift */,
-				C141FDE22EE7C1050034E9FD /* CachedAsyncImage */,
-				C141FDE52EE7C1A10034E9FD /* SDWebImageSwiftUI */,
+				C1FA209C2EEDA93D00CC79AD /* RxCocoa */,
+				C1FA209E2EEDA93D00CC79AD /* RxSwift */,
+				C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */,
+				C1FA20A42EEDA96000CC79AD /* Alamofire */,
+				C1FA20A72EEDA98800CC79AD /* RealmSwift */,
+				C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */,
 			);
 			productName = Capy4Fun;
 			productReference = C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */;
@@ -155,6 +176,7 @@
 				C1C66F722EE744FF00A7B2DD /* Sources */,
 				C1C66F732EE744FF00A7B2DD /* Frameworks */,
 				C1C66F742EE744FF00A7B2DD /* Resources */,
+				C1FA20BB2EEDC25A00CC79AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,31 +188,14 @@
 			);
 			name = Capy4FunTests;
 			packageProductDependencies = (
-				C1463D072EE878D700DB9498 /* RxBlocking */,
+				C1FA20B12EEDC0F100CC79AD /* RxTest */,
+				C1FA20B42EEDC10D00CC79AD /* RxBlocking */,
+				C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */,
+				C1FA20B82EEDC25A00CC79AD /* Realm */,
 			);
 			productName = Capy4FunTests;
 			productReference = C1C66F762EE744FF00A7B2DD /* Capy4FunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C1C66F7F2EE744FF00A7B2DD /* Capy4FunUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1C66F912EE744FF00A7B2DD /* Build configuration list for PBXNativeTarget "Capy4FunUITests" */;
-			buildPhases = (
-				C1C66F7C2EE744FF00A7B2DD /* Sources */,
-				C1C66F7D2EE744FF00A7B2DD /* Frameworks */,
-				C1C66F7E2EE744FF00A7B2DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1C66F822EE744FF00A7B2DD /* PBXTargetDependency */,
-			);
-			name = Capy4FunUITests;
-			packageProductDependencies = (
-			);
-			productName = Capy4FunUITests;
-			productReference = C1C66F802EE744FF00A7B2DD /* Capy4FunUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -209,10 +214,6 @@
 						CreatedOnToolsVersion = 26.1.1;
 						TestTargetID = C1C66F5F2EE744FD00A7B2DD;
 					};
-					C1C66F7F2EE744FF00A7B2DD = {
-						CreatedOnToolsVersion = 26.1.1;
-						TestTargetID = C1C66F5F2EE744FD00A7B2DD;
-					};
 				};
 			};
 			buildConfigurationList = C1C66F5B2EE744FD00A7B2DD /* Build configuration list for PBXProject "Capy4Fun" */;
@@ -225,11 +226,11 @@
 			mainGroup = C1C66F572EE744FD00A7B2DD;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C1C66FA52EE7459F00A7B2DD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C1C66FAC2EE7460200A7B2DD /* XCRemoteSwiftPackageReference "RxSwift" */,
-				C1C66FCA2EE74D6B00A7B2DD /* XCRemoteSwiftPackageReference "realm-swift" */,
-				C141FDE12EE7C1050034E9FD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				C141FDE42EE7C1A10034E9FD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1C66F612EE744FD00A7B2DD /* Products */;
@@ -238,7 +239,6 @@
 			targets = (
 				C1C66F5F2EE744FD00A7B2DD /* Capy4Fun */,
 				C1C66F752EE744FF00A7B2DD /* Capy4FunTests */,
-				C1C66F7F2EE744FF00A7B2DD /* Capy4FunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,13 +252,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1C66F742EE744FF00A7B2DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1C66F7E2EE744FF00A7B2DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,7 +277,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint not installed\"\nfi\n";
+			shellScript = "SWIFTLINT_EXECUTABLE=\"${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftLint/.build/release/swiftlint\"\n\n# Hanya jalankan linting jika executable ada.\nif [ -f \"$SWIFTLINT_EXECUTABLE\" ]; then\n  echo \"Running SwiftLint via SPM...\"\n  \"$SWIFTLINT_EXECUTABLE\"\nelse\n  echo \"warning: SwiftLint executable not found. Make sure the dependency is correctly added and the target has been built once.\"\n  exit 0\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -303,13 +296,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1C66F7C2EE744FF00A7B2DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,11 +303,6 @@
 			isa = PBXTargetDependency;
 			target = C1C66F5F2EE744FD00A7B2DD /* Capy4Fun */;
 			targetProxy = C1C66F772EE744FF00A7B2DD /* PBXContainerItemProxy */;
-		};
-		C1C66F822EE744FF00A7B2DD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1C66F5F2EE744FD00A7B2DD /* Capy4Fun */;
-			targetProxy = C1C66F812EE744FF00A7B2DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,46 +534,6 @@
 			};
 			name = Release;
 		};
-		C1C66F922EE744FF00A7B2DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CU68DCDFXC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zgenit.dcdg.Capy4FunUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Capy4Fun;
-			};
-			name = Debug;
-		};
-		C1C66F932EE744FF00A7B2DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CU68DCDFXC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zgenit.dcdg.Capy4FunUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Capy4Fun;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -623,43 +564,10 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1C66F912EE744FF00A7B2DD /* Build configuration list for PBXNativeTarget "Capy4FunUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1C66F922EE744FF00A7B2DD /* Debug */,
-				C1C66F932EE744FF00A7B2DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C141FDE12EE7C1050034E9FD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.1;
-			};
-		};
-		C141FDE42EE7C1A10034E9FD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.4;
-			};
-		};
-		C1C66FA52EE7459F00A7B2DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
-			};
-		};
-		C1C66FAC2EE7460200A7B2DD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -667,7 +575,23 @@
 				minimumVersion = 6.9.1;
 			};
 		};
-		C1C66FCA2EE74D6B00A7B2DD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
+		C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
@@ -675,43 +599,66 @@
 				kind = branch;
 			};
 		};
+		C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C141FDE22EE7C1050034E9FD /* CachedAsyncImage */ = {
+		C1FA209C2EEDA93D00CC79AD /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C141FDE12EE7C1050034E9FD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
-		};
-		C141FDE52EE7C1A10034E9FD /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C141FDE42EE7C1A10034E9FD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		C1463D072EE878D700DB9498 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1C66FAC2EE7460200A7B2DD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		C1C66FA62EE7459F00A7B2DD /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1C66FA52EE7459F00A7B2DD /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		C1C66FAD2EE7460200A7B2DD /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1C66FAC2EE7460200A7B2DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		C1C66FAF2EE7460200A7B2DD /* RxSwift */ = {
+		C1FA209E2EEDA93D00CC79AD /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1C66FAC2EE7460200A7B2DD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		C1C66FCB2EE74D6B00A7B2DD /* RealmSwift */ = {
+		C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1C66FCA2EE74D6B00A7B2DD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		C1FA20A42EEDA96000CC79AD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C1FA20A72EEDA98800CC79AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		C1FA20B12EEDC0F100CC79AD /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		C1FA20B42EEDC10D00CC79AD /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		C1FA20B82EEDC25A00CC79AD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

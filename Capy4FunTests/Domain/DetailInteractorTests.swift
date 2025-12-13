@@ -2,7 +2,7 @@
 //  DetailInteractorTests.swift
 //  Capy4Fun
 //
-//  Created by Mputh on 09/12/25.
+//  Created by Mputh on 13/12/25.
 //
 
 import XCTest
@@ -10,60 +10,98 @@ import RxSwift
 import RxBlocking
 @testable import Capy4Fun
 
-class DetailInteractorTests: XCTestCase {
+final class DetailInteractorTests: XCTestCase {
 
-    static var mockCapybara: CapybaraModel = CapybaraModel(
-        id: "D1",
-        title: "Detail Capy",
-        image: "url",
-        description: "Detail Deskripsi",
-        isFavorite: false
-    )
+    private var interactor: DetailInteractor!
+    private var repository: MockCapybaraRepository!
+    private var capybara: Capy4Fun.CapybaraModel!
 
-    let mockRepository = HomeInteractorTests.CapybaraRepositoryMock(
-        capybarasToReturn: [mockCapybara]
-    )
+    override func setUp() {
+        super.setUp()
 
-    func testGetCapybaraReturnsInjectedData() throws {
-        let interactor = DetailInteractor(
-            repository: mockRepository,
-            capybara: DetailInteractorTests.mockCapybara
+        capybara = Capy4Fun.CapybaraModel(
+            id: "1",
+            title: "Capy #1",
+            image: "",
+            description: "Deskripsi",
+            isFavorite: false
         )
+
+        repository = MockCapybaraRepository()
+        interactor = DetailInteractor(
+            repository: repository,
+            capybara: capybara
+        )
+    }
+
+    override func tearDown() {
+        interactor = nil
+        repository = nil
+        capybara = nil
+        super.tearDown()
+    }
+
+    // MARK: - getCapybara
+
+    func test_getCapybara_returnsInjectedCapybara() {
+        // When
         let result = interactor.getCapybara()
 
-        XCTAssertEqual(result.id, "D1")
-        XCTAssertEqual(result.title, "Detail Capy")
-        XCTAssertEqual(result.isFavorite, false)
+        // Then
+        XCTAssertEqual(result.id, capybara.id)
+        XCTAssertEqual(result.title, capybara.title)
+        XCTAssertEqual(result.isFavorite, capybara.isFavorite)
     }
 
-    func testAddToFavoriteCallsRepositoryAndReturnsSuccess() throws {
-        let interactor = DetailInteractor(
-            repository: mockRepository,
-            capybara: DetailInteractorTests.mockCapybara
-        )
+    // MARK: - addToFavorite
 
-        let resultObservable = interactor.addToFavorite()
+    func test_addToFavorite_returnsTrue() throws {
+        // When
+        let result = try interactor
+            .addToFavorite()
+            .toBlocking()
+            .single()
 
-        do {
-            let result = try resultObservable.toBlocking().first()
-            XCTAssertEqual(result, true, "Observable should return true upon success.")
-        } catch {
-            XCTFail("Blocking failed with error: \(error)")
-        }
+        // Then
+        XCTAssertTrue(repository.addToFavoriteCalled)
+        XCTAssertTrue(result)
     }
 
-    func testRemoveFromFavoriteCallsRepositoryAndReturnsSuccess() throws {
-        let interactor = DetailInteractor(
-            repository: mockRepository,
-            capybara: DetailInteractorTests.mockCapybara
-        )
-        let resultObservable = interactor.removeFromFavorite()
+    // MARK: - removeFromFavorite
 
-        do {
-            let result = try resultObservable.toBlocking().first()
-            XCTAssertEqual(result, true, "Observable should return true upon success.")
-        } catch {
-            XCTFail("Blocking failed with error: \(error)")
-        }
+    func test_removeFromFavorite_returnsTrue() throws {
+        // When
+        let result = try interactor
+            .removeFromFavorite()
+            .toBlocking()
+            .single()
+
+        // Then
+        XCTAssertTrue(repository.removeFromFavoriteCalled)
+        XCTAssertTrue(result)
+    }
+}
+
+final class MockCapybaraRepository: CapybaraRepositoryProtocol {
+
+    private(set) var addToFavoriteCalled = false
+    private(set) var removeFromFavoriteCalled = false
+
+    func getCapybaras() -> Observable<[Capy4Fun.CapybaraModel]> {
+        Observable.just([])
+    }
+
+    func getFavoriteCapybaras() -> Observable<[Capy4Fun.CapybaraModel]> {
+        Observable.just([])
+    }
+
+    func addToFavorite(from capybara: Capy4Fun.CapybaraModel) -> Observable<Bool> {
+        addToFavoriteCalled = true
+        return Observable.just(true)
+    }
+
+    func removeFromFavorite(from capybara: Capy4Fun.CapybaraModel) -> Observable<Bool> {
+        removeFromFavoriteCalled = true
+        return Observable.just(true)
     }
 }
