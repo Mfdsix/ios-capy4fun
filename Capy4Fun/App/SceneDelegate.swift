@@ -7,31 +7,30 @@
 
 import UIKit
 import SwiftUI
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-
-        let injection = Injection()
-
-        let homeUseCase = injection.provideHome()
-        let homePresenter = HomePresenter(homeUseCase: homeUseCase)
-        let favoriteUseCase = injection.provideFavorite()
-        let favoritePresenter = FavoritePresenter(favoriteUseCase: favoriteUseCase)
-
+        
+        let container = Injection.shared.container
+        
+        let homePresenter = container.resolve(HomePresenter.self)!
+        let favoritePresenter = container.resolve(FavoritePresenter.self)!
+        
         let mainTabView = MainTabView(
             homePresenter: homePresenter,
             favoritePresenter: favoritePresenter
         )
-
+        
         guard let windowScene = scene as? UIWindowScene else { return }
-
+        
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UIHostingController(rootView: mainTabView)
         self.window = window

@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     @ObservedObject var homePresenter: HomePresenter
     @ObservedObject var favoritePresenter: FavoritePresenter
-
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -19,16 +19,16 @@ struct MainTabView: View {
             .tabItem {
                 Label("Feeds", systemImage: "newspaper.fill")
             }
-
+            
             NavigationView {
                 FavoriteView(presenter: favoritePresenter)
             }
             .tabItem {
                 Label("Favorites", systemImage: "heart.fill")
             }
-
-             NavigationView { ProfileView() }
-                 .tabItem { Label("Profile", systemImage: "person.fill") }
+            
+            NavigationView { ProfileView() }
+                .tabItem { Label("Profile", systemImage: "person.fill") }
         }
     }
 }

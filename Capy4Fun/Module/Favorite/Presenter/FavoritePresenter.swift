@@ -10,24 +10,24 @@ import RxSwift
 import Combine
 
 class FavoritePresenter: ObservableObject {
-
+    
     private let router = HomeRouter()
     private let favoriteUseCase: FavoriteUseCase
     private let disposeBag = DisposeBag()
-
+    
     @Published var capybaras: [CapybaraModel] = []
     @Published var errorMessage: String = ""
     @Published var loadingState: Bool = false
-
+    
     init(favoriteUseCase: FavoriteUseCase) {
         self.favoriteUseCase = favoriteUseCase
     }
-
+    
     func getCapybaras() {
         capybaras = []
         loadingState = true
         errorMessage = ""
-
+        
         favoriteUseCase.getCapybaras()
             .observe(on: MainScheduler.instance)
             .subscribe { result in
@@ -40,7 +40,7 @@ class FavoritePresenter: ObservableObject {
             }
             .disposed(by: disposeBag)
     }
-
+    
     func linkBuilder<Content: View>(
         for capybara: CapybaraModel,
         @ViewBuilder content: () -> Content
@@ -48,5 +48,5 @@ class FavoritePresenter: ObservableObject {
         NavigationLink(
             destination: router.makeDetailView(for: capybara)) { content() }
     }
-
+    
 }

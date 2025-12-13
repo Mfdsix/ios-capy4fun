@@ -10,19 +10,19 @@ import Combine
 import RxSwift
 
 class DetailPresenter: ObservableObject {
-
-  private let detailUseCase: DetailUseCase
+    
+    private let detailUseCase: DetailUseCase
     private let disposeBag = DisposeBag()
-
-  @Published var capybara: CapybaraModel
-  @Published var errorMessage: String = ""
-  @Published var loadingState: Bool = false
-
-  init(detailUseCase: DetailUseCase) {
-    self.detailUseCase = detailUseCase
-    capybara = detailUseCase.getCapybara()
-  }
-
+    
+    @Published var capybara: CapybaraModel
+    @Published var errorMessage: String = ""
+    @Published var loadingState: Bool = false
+    
+    init(detailUseCase: DetailUseCase) {
+        self.detailUseCase = detailUseCase
+        capybara = detailUseCase.getCapybara()
+    }
+    
     func toggleFavorite() {
         if !capybara.isFavorite {
             detailUseCase.addToFavorite()
@@ -36,5 +36,5 @@ class DetailPresenter: ObservableObject {
                 .disposed(by: disposeBag)
         }
     }
-
+    
 }

@@ -9,21 +9,21 @@ import Foundation
 import RxSwift
 
 protocol FavoriteUseCase {
-
-  func getCapybaras() -> Observable<[CapybaraModel]>
-
+    
+    func getCapybaras() -> Observable<[CapybaraModel]>
+    
 }
 
 class FavoriteInteractor: FavoriteUseCase {
-
-  private let repository: CapybaraRepositoryProtocol
-
-  required init(repository: CapybaraRepositoryProtocol) {
-    self.repository = repository
-  }
-
-  func getCapybaras() -> Observable<[CapybaraModel]> {
-    repository.getFavoriteCapybaras()
-  }
-
+    
+    private let repository: CapybaraRepositoryProtocol
+    
+    required init(repository: CapybaraRepositoryProtocol) {
+        self.repository = repository
+    }
+    
+    func getCapybaras() -> Observable<[CapybaraModel]> {
+        repository.getFavoriteCapybaras()
+    }
+    
 }

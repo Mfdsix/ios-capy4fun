@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    
     @ObservedObject var presenter: HomePresenter
-
+    
     var body: some View {
         ZStack {
             if presenter.loadingState {
@@ -33,7 +33,7 @@ struct HomeView: View {
                     presenter.getCapybaras()
                 }
             }
-
+            
             if !presenter.errorMessage.isEmpty {
                 LazyVStack {
                     HStack {
@@ -41,9 +41,9 @@ struct HomeView: View {
                             .foregroundColor(.red)
                             .font(.callout)
                             .multilineTextAlignment(.leading)
-
+                        
                         Spacer()
-
+                        
                         Button("Retry") {
                             presenter.getCapybaras()
                         }
@@ -53,7 +53,7 @@ struct HomeView: View {
                     .background(Color.red.opacity(0.1))
                     .cornerRadius(12)
                     .padding(.horizontal)
-
+                    
                     Spacer()
                 }
                 .transition(.opacity)

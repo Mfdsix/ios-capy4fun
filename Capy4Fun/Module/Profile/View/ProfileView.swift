@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
-
+    
     var body: some View {
         VStack(spacing: 30) {
             ProfileImage(imageName: "mfdsix")
-
+            
             VStack(spacing: 8) {
                 Text("Mahfudz Ainur Rif'an")
                     .font(.title)
                     .bold()
-
+                
                 Text("Expert iOS Developer")
                     .font(.headline)
                     .foregroundColor(.secondary)
             }
-
+            
             Spacer()
         }
         .padding(.top, 50)
@@ -32,7 +32,7 @@ struct ProfileView: View {
 
 struct ProfileImage: View {
     var imageName: String
-
+    
     var body: some View {
         Image(imageName)
             .resizable()

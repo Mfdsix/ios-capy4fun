@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1536C2C2EEDCD9B0078BF48 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C1536C2B2EEDCD9B0078BF48 /* Swinject */; };
 		C1FA209D2EEDA93D00CC79AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209C2EEDA93D00CC79AD /* RxCocoa */; };
 		C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209E2EEDA93D00CC79AD /* RxSwift */; };
 		C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */; };
@@ -90,6 +91,7 @@
 			files = (
 				C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */,
 				C1FA20A52EEDA96000CC79AD /* Alamofire in Frameworks */,
+				C1536C2C2EEDCD9B0078BF48 /* Swinject in Frameworks */,
 				C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */,
 				C1FA20AE2EEDB38B00CC79AD /* CachedAsyncImage in Frameworks */,
 				C1FA20A82EEDA98800CC79AD /* RealmSwift in Frameworks */,
@@ -164,6 +166,7 @@
 				C1FA20A42EEDA96000CC79AD /* Alamofire */,
 				C1FA20A72EEDA98800CC79AD /* RealmSwift */,
 				C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */,
+				C1536C2B2EEDCD9B0078BF48 /* Swinject */,
 			);
 			productName = Capy4Fun;
 			productReference = C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */;
@@ -231,6 +234,7 @@
 				C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */,
 				C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1C66F612EE744FD00A7B2DD /* Products */;
@@ -567,6 +571,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
 		C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -610,6 +622,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C1536C2B2EEDCD9B0078BF48 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		C1FA209C2EEDA93D00CC79AD /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;

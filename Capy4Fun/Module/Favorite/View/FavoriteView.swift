@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FavoriteView: View {
-
+    
     @ObservedObject var presenter: FavoritePresenter
-
+    
     var body: some View {
         ZStack {
             if presenter.loadingState {
@@ -50,7 +50,7 @@ struct FavoriteView: View {
                     }
                 }
             }
-
+            
             if !presenter.errorMessage.isEmpty {
                 LazyVStack {
                     HStack {
@@ -58,9 +58,9 @@ struct FavoriteView: View {
                             .foregroundColor(.red)
                             .font(.callout)
                             .multilineTextAlignment(.leading)
-
+                        
                         Spacer()
-
+                        
                         Button("Retry") {
                             presenter.getCapybaras()
                         }
@@ -70,7 +70,7 @@ struct FavoriteView: View {
                     .background(Color.red.opacity(0.1))
                     .cornerRadius(12)
                     .padding(.horizontal)
-
+                    
                     Spacer()
                 }
                 .transition(.opacity)

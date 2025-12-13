@@ -9,21 +9,21 @@ import Foundation
 import RxSwift
 
 protocol HomeUseCase {
-
-  func getCapybaras() -> Observable<[CapybaraModel]>
-
+    
+    func getCapybaras() -> Observable<[CapybaraModel]>
+    
 }
 
 class HomeInteractor: HomeUseCase {
-
-  private let repository: CapybaraRepositoryProtocol
-
-  required init(repository: CapybaraRepositoryProtocol) {
-    self.repository = repository
-  }
-
-  func getCapybaras() -> Observable<[CapybaraModel]> {
-    repository.getCapybaras()
-  }
-
+    
+    private let repository: CapybaraRepositoryProtocol
+    
+    required init(repository: CapybaraRepositoryProtocol) {
+        self.repository = repository
+    }
+    
+    func getCapybaras() -> Observable<[CapybaraModel]> {
+        repository.getCapybaras()
+    }
+    
 }

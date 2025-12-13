@@ -8,11 +8,11 @@
 import Foundation
 
 struct CapybaraModel: Equatable, Identifiable {
-
+    
     let id: String
     let title: String
     let image: String
     let description: String
     var isFavorite: Bool
-
+    
 }

@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import Swinject
 
 class HomeRouter {
-
-  func makeDetailView(for capybara: CapybaraModel) -> some View {
-    let detailUseCase = Injection.init().provideDetail(capybara: capybara)
-    let presenter = DetailPresenter(detailUseCase: detailUseCase)
-    return DetailView(presenter: presenter)
-  }
-
+    
+    func makeDetailView(for capybara: CapybaraModel) -> some View {
+        let presenter = Injection.shared.container.resolve(
+            DetailPresenter.self,
+            argument: capybara
+        )!
+        return DetailView(presenter: presenter)
+    }
+    
 }

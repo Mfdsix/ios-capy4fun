@@ -10,16 +10,16 @@ import RealmSwift
 import RxSwift
 
 protocol LocaleDataSourceProtocol: AnyObject {
-
+    
     func getFavoriteCapybaras() -> Observable<[CapybaraEntity]>
     func findCapybara(id: String) -> Observable<Bool>
     func addCapybaraToFavorite(from capybara: CapybaraEntity) -> Observable<Bool>
     func removeCapybaraFromFavorite(from id: String) -> Observable<Bool>
-
+    
 }
 
 final class LocaleDataSource: NSObject {
-
+    
     private let realm: Realm?
     private init(realm: Realm?) {
         self.realm = realm
@@ -27,11 +27,11 @@ final class LocaleDataSource: NSObject {
     static let sharedInstance: (Realm?) -> LocaleDataSource = { realmDatabase in
         return LocaleDataSource(realm: realmDatabase)
     }
-
+    
 }
 
 extension LocaleDataSource: LocaleDataSourceProtocol {
-
+    
     func getFavoriteCapybaras() -> Observable<[CapybaraEntity]> {
         return Observable<[CapybaraEntity]>.create { observer in
             if let realm = self.realm {
@@ -39,41 +39,41 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
                     realm.objects(CapybaraEntity.self)
                         .sorted(byKeyPath: "title", ascending: true)
                 }()
-
+                
                 observer.onNext(datas.toArray(ofType: CapybaraEntity.self))
                 observer.onCompleted()
             } else {
                 observer.onError(DatabaseError.invalidInstance)
             }
-
+            
             return Disposables.create()
         }
     }
-
+    
     func findCapybara(id: String) -> Observable<Bool> {
         return Observable<Bool>.create { observer in
             if let realm = self.realm {
                 let exists = realm.objects(CapybaraEntity.self)
                     .filter("id == %@", id)
                     .isEmpty == false
-
+                
                 observer.onNext(exists)
                 observer.onCompleted()
             } else {
                 observer.onError(DatabaseError.invalidInstance)
             }
-
+            
             return Disposables.create()
         }
     }
-
+    
     func addCapybaraToFavorite(from capybara: CapybaraEntity) -> Observable<Bool> {
         return Observable<Bool>.create { observer in
             if let realm = self.realm {
                 do {
                     try realm.write {
                         realm.add(capybara, update: .all)
-
+                        
                         observer.onNext(true)
                         observer.onCompleted()
                     }
@@ -83,11 +83,11 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
             } else {
                 observer.onError(DatabaseError.invalidInstance)
             }
-
+            
             return Disposables.create()
         }
     }
-
+    
     func removeCapybaraFromFavorite(from id: String) -> Observable<Bool> {
         return Observable<Bool>.create { observer in
             if let realm = self.realm {
@@ -107,11 +107,11 @@ extension LocaleDataSource: LocaleDataSourceProtocol {
             } else {
                 observer.onError(DatabaseError.invalidInstance)
             }
-
+            
             return Disposables.create()
         }
     }
-
+    
 }
 
 extension Results {
@@ -122,7 +122,7 @@ extension Results {
                 array.append(result)
             }
         }
-
+        
         return array
     }
 }

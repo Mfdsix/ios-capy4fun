@@ -11,16 +11,16 @@ import RxBlocking
 @testable import Capy4Fun
 
 final class HomeInteractorTests: XCTestCase {
-
+    
     private var interactor: HomeInteractor!
     private var repository: MockCapybaraRepository!
-
+    
     override func setUp() {
         super.setUp()
         repository = MockCapybaraRepository()
         interactor = HomeInteractor(repository: repository)
     }
-
+    
     override func tearDown() {
         interactor = nil
         repository = nil
@@ -29,31 +29,31 @@ final class HomeInteractorTests: XCTestCase {
     
     static var mockCapybaras: [Capy4Fun.CapybaraModel] = [
         Capy4Fun.CapybaraModel(
-                id: "1",
-                title: "Capy #1",
-                image: "",
-                description: "Deskripsi 1",
-                isFavorite: false
-            ),
+            id: "1",
+            title: "Capy #1",
+            image: "",
+            description: "Deskripsi 1",
+            isFavorite: false
+        ),
         Capy4Fun.CapybaraModel(
-                id: "2",
-                title: "Capy #2",
-                image: "",
-                description: "Deskripsi 2",
-                isFavorite: true
-            )
-        ]
-
+            id: "2",
+            title: "Capy #2",
+            image: "",
+            description: "Deskripsi 2",
+            isFavorite: true
+        )
+    ]
+    
     func test_getCapybaras_whenSuccess_returnsCapybaraList() throws {
-
+        
         repository.stubbedResult = Observable.just(HomeInteractorTests.mockCapybaras)
-
+        
         // When
         let result = try interactor
             .getCapybaras()
             .toBlocking()
             .single()
-
+        
         // Then
         XCTAssertTrue(repository.isCalled)
         XCTAssertEqual(result.count, HomeInteractorTests.mockCapybaras.count)
@@ -85,5 +85,5 @@ extension HomeInteractorTests {
             return Observable.just(true)
         }
     }
-
+    
 }

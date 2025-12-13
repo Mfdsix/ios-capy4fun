@@ -6,7 +6,7 @@
 //
 
 final class CapybaraMapper {
-
+    
     static func mapResponsesToDomains(
         input responses: [CapybaraResponse]
     ) -> [CapybaraModel] {
@@ -20,7 +20,7 @@ final class CapybaraMapper {
             )
         }
     }
-
+    
     static func mapEntitiesToDomains(
         input entities: [CapybaraEntity]
     ) -> [CapybaraModel] {
@@ -34,7 +34,7 @@ final class CapybaraMapper {
             )
         }
     }
-
+    
     static func convertModelToEntity(
         input model: CapybaraModel
     ) -> CapybaraEntity {
@@ -43,8 +43,8 @@ final class CapybaraMapper {
         entity.title = model.title
         entity.image = model.image
         entity.desc = model.description
-
+        
         return entity
     }
-
+    
 }
