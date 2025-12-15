@@ -20,20 +20,10 @@ struct FavoriteView: View {
                 }
             } else {
                 if presenter.capybaras.count == 0 {
-                    LazyVStack {
-                        HStack {
-                            Text("You have no Capybara. Let's Find One")
-                                .foregroundColor(.blue)
-                                .font(.callout)
-                                .multilineTextAlignment(.leading)
-                        }
-                        .padding()
-                        .background(Color.blue.opacity(0.1))
-                        .cornerRadius(12)
-                        .padding(.horizontal)
-                    }
-                    .transition(.opacity)
-                    .animation(.easeInOut, value: presenter.errorMessage)
+                    Text("You have no Capybara. Let's Find One")
+                        .foregroundColor(.blue)
+                        .font(.callout)
+                        .multilineTextAlignment(.leading)
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
                         LazyVStack(spacing: 0) {
