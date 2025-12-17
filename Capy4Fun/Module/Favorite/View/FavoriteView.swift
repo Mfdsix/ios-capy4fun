@@ -5,6 +5,7 @@
 //  Created by Mputh on 09/12/25.
 //
 
+import Core
 import SwiftUI
 
 struct FavoriteView: View {

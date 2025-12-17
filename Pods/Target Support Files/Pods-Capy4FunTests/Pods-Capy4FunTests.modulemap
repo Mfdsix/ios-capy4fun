@@ -1,0 +1,6 @@
+framework module Pods_Capy4FunTests {
+  umbrella header "Pods-Capy4FunTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

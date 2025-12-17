@@ -5,9 +5,9 @@
 //  Created by Mputh on 09/12/25.
 //
 
+import Core
 import SwiftUI
 import SDWebImageSwiftUI
-import CachedAsyncImage
 
 struct CapybaraFavRow: View {
     
@@ -20,10 +20,10 @@ struct CapybaraFavRow: View {
             imageThumbnail
             VStack(alignment: .leading, spacing: 4) {
                 Text(capybara.title)
-                    .font(.headline)
+                    .font(.custom("Fredoka-SemiBold", size: 28))
                     .lineLimit(1)
                 Text(capybara.description)
-                    .font(.subheadline)
+                    .font(.custom("Inter-Regular", size: 14))
                     .foregroundColor(.secondary)
                     .lineLimit(2)
             }

@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import Common
 
 @main
 struct Capy4FunApp: App {
-
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-
+    
+    init() {
+        FontLoader.registerFonts()
+    }
+    
     var body: some Scene {
         WindowGroup {
+            
             EmptyView()
         }
     }

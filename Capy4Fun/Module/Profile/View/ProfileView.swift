@@ -34,7 +34,7 @@ struct ProfileImage: View {
     var imageName: String
     
     var body: some View {
-        Image(imageName)
+        Image(imageName, bundle: Bundle(identifier: "com.zgenit.dcdg.Capyb4Fun.Common"))
             .resizable()
             .scaledToFill()
             .frame(width: 150, height: 150)

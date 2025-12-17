@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1536C2C2EEDCD9B0078BF48 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C1536C2B2EEDCD9B0078BF48 /* Swinject */; };
-		C1FA209D2EEDA93D00CC79AD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209C2EEDA93D00CC79AD /* RxCocoa */; };
-		C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA209E2EEDA93D00CC79AD /* RxSwift */; };
-		C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */; };
-		C1FA20A52EEDA96000CC79AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A42EEDA96000CC79AD /* Alamofire */; };
-		C1FA20A82EEDA98800CC79AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20A72EEDA98800CC79AD /* RealmSwift */; };
-		C1FA20AE2EEDB38B00CC79AD /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */; };
-		C1FA20B22EEDC0F100CC79AD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B12EEDC0F100CC79AD /* RxTest */; };
-		C1FA20B52EEDC10D00CC79AD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B42EEDC10D00CC79AD /* RxBlocking */; };
-		C1FA20B72EEDC25000CC79AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */; };
-		C1FA20B92EEDC25A00CC79AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B82EEDC25A00CC79AD /* Realm */; };
-		C1FA20BC2EEDC26700CC79AD /* Realm in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C1FA20B82EEDC25A00CC79AD /* Realm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		42C790F23A2F9B8D391E7CB6 /* Pods_Capy4Fun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30587637A8D998DC0DB69708 /* Pods_Capy4Fun.framework */; };
+		4AEDE27884AC316F27384819 /* Pods_Capy4FunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF3D0DB0ABBFFF5460465B9 /* Pods_Capy4FunTests.framework */; };
+		C10D7DA82EF25D9000C4C7E0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C10D7DA72EF25D9000C4C7E0 /* Core */; };
+		C10D7DAB2EF25DA200C4C7E0 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = C10D7DAA2EF25DA200C4C7E0 /* Home */; };
+		C10D7DAE2EF25FD700C4C7E0 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = C10D7DAD2EF25FD700C4C7E0 /* Common */; };
+		C10D7DB12EF263B900C4C7E0 /* Detail in Frameworks */ = {isa = PBXBuildFile; productRef = C10D7DB02EF263B900C4C7E0 /* Detail */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +32,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C1FA20BC2EEDC26700CC79AD /* Realm in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,24 +39,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1BA6A87E562B3C75662A88AA /* Pods-Capy4FunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capy4FunTests.debug.xcconfig"; path = "Target Support Files/Pods-Capy4FunTests/Pods-Capy4FunTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30587637A8D998DC0DB69708 /* Pods_Capy4Fun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capy4Fun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39A2F0E9960C69B3E2F5115C /* Pods-Capy4FunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capy4FunTests.release.xcconfig"; path = "Target Support Files/Pods-Capy4FunTests/Pods-Capy4FunTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BF3D0DB0ABBFFF5460465B9 /* Pods_Capy4FunTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capy4FunTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD8D2306C31D65CE765F59D /* Pods-Capy4Fun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capy4Fun.debug.xcconfig"; path = "Target Support Files/Pods-Capy4Fun/Pods-Capy4Fun.debug.xcconfig"; sourceTree = "<group>"; };
+		9D6CA910EE19D99E5FF8846F /* Pods-Capy4Fun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capy4Fun.release.xcconfig"; path = "Target Support Files/Pods-Capy4Fun/Pods-Capy4Fun.release.xcconfig"; sourceTree = "<group>"; };
 		C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capy4Fun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C66F762EE744FF00A7B2DD /* Capy4FunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capy4FunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C1C66F882EE744FF00A7B2DD /* Exceptions for "Capy4Fun" folder in "Capy4Fun" target */ = {
+		C105D0922EF005330004E4F2 /* Exceptions for "Capy4Fun" folder in "Capy4Fun" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Supporting Files/Info.plist",
 			);
 			target = C1C66F5F2EE744FD00A7B2DD /* Capy4Fun */;
-		};
-		C1FA20BE2EEDC33000CC79AD /* Exceptions for "Capy4Fun" folder in "Capy4FunTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Core/Domain/Model/CapybaraModel.swift,
-			);
-			target = C1C66F752EE744FF00A7B2DD /* Capy4FunTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -71,8 +63,7 @@
 		C1C66F622EE744FD00A7B2DD /* Capy4Fun */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C1C66F882EE744FF00A7B2DD /* Exceptions for "Capy4Fun" folder in "Capy4Fun" target */,
-				C1FA20BE2EEDC33000CC79AD /* Exceptions for "Capy4Fun" folder in "Capy4FunTests" target */,
+				C105D0922EF005330004E4F2 /* Exceptions for "Capy4Fun" folder in "Capy4Fun" target */,
 			);
 			path = Capy4Fun;
 			sourceTree = "<group>";
@@ -89,13 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1FA20A22EEDA94F00CC79AD /* SDWebImageSwiftUI in Frameworks */,
-				C1FA20A52EEDA96000CC79AD /* Alamofire in Frameworks */,
-				C1536C2C2EEDCD9B0078BF48 /* Swinject in Frameworks */,
-				C1FA209F2EEDA93D00CC79AD /* RxSwift in Frameworks */,
-				C1FA20AE2EEDB38B00CC79AD /* CachedAsyncImage in Frameworks */,
-				C1FA20A82EEDA98800CC79AD /* RealmSwift in Frameworks */,
-				C1FA209D2EEDA93D00CC79AD /* RxCocoa in Frameworks */,
+				C10D7DB12EF263B900C4C7E0 /* Detail in Frameworks */,
+				42C790F23A2F9B8D391E7CB6 /* Pods_Capy4Fun.framework in Frameworks */,
+				C10D7DA82EF25D9000C4C7E0 /* Core in Frameworks */,
+				C10D7DAB2EF25DA200C4C7E0 /* Home in Frameworks */,
+				C10D7DAE2EF25FD700C4C7E0 /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1FA20B72EEDC25000CC79AD /* SDWebImageSwiftUI in Frameworks */,
-				C1FA20B22EEDC0F100CC79AD /* RxTest in Frameworks */,
-				C1FA20B92EEDC25A00CC79AD /* Realm in Frameworks */,
-				C1FA20B52EEDC10D00CC79AD /* RxBlocking in Frameworks */,
+				4AEDE27884AC316F27384819 /* Pods_Capy4FunTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +106,7 @@
 				C1C66F792EE744FF00A7B2DD /* Capy4FunTests */,
 				C1FA20B32EEDC10D00CC79AD /* Frameworks */,
 				C1C66F612EE744FD00A7B2DD /* Products */,
+				FE3883854C553A53D9A227FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +122,21 @@
 		C1FA20B32EEDC10D00CC79AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30587637A8D998DC0DB69708 /* Pods_Capy4Fun.framework */,
+				4BF3D0DB0ABBFFF5460465B9 /* Pods_Capy4FunTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE3883854C553A53D9A227FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DD8D2306C31D65CE765F59D /* Pods-Capy4Fun.debug.xcconfig */,
+				9D6CA910EE19D99E5FF8846F /* Pods-Capy4Fun.release.xcconfig */,
+				1BA6A87E562B3C75662A88AA /* Pods-Capy4FunTests.debug.xcconfig */,
+				39A2F0E9960C69B3E2F5115C /* Pods-Capy4FunTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +146,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1C66F892EE744FF00A7B2DD /* Build configuration list for PBXNativeTarget "Capy4Fun" */;
 			buildPhases = (
+				F08C310BA9DD2D107A810228 /* [CP] Check Pods Manifest.lock */,
 				C1C66F5C2EE744FD00A7B2DD /* Sources */,
 				C1C66F5D2EE744FD00A7B2DD /* Frameworks */,
 				C1C66F5E2EE744FD00A7B2DD /* Resources */,
-				C1463D022EE8773100DB9498 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,13 +160,10 @@
 			);
 			name = Capy4Fun;
 			packageProductDependencies = (
-				C1FA209C2EEDA93D00CC79AD /* RxCocoa */,
-				C1FA209E2EEDA93D00CC79AD /* RxSwift */,
-				C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */,
-				C1FA20A42EEDA96000CC79AD /* Alamofire */,
-				C1FA20A72EEDA98800CC79AD /* RealmSwift */,
-				C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */,
-				C1536C2B2EEDCD9B0078BF48 /* Swinject */,
+				C10D7DA72EF25D9000C4C7E0 /* Core */,
+				C10D7DAA2EF25DA200C4C7E0 /* Home */,
+				C10D7DAD2EF25FD700C4C7E0 /* Common */,
+				C10D7DB02EF263B900C4C7E0 /* Detail */,
 			);
 			productName = Capy4Fun;
 			productReference = C1C66F602EE744FD00A7B2DD /* Capy4Fun.app */;
@@ -176,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1C66F8E2EE744FF00A7B2DD /* Build configuration list for PBXNativeTarget "Capy4FunTests" */;
 			buildPhases = (
+				0DDA8A968F519E8D22441DE2 /* [CP] Check Pods Manifest.lock */,
 				C1C66F722EE744FF00A7B2DD /* Sources */,
 				C1C66F732EE744FF00A7B2DD /* Frameworks */,
 				C1C66F742EE744FF00A7B2DD /* Resources */,
@@ -191,10 +189,6 @@
 			);
 			name = Capy4FunTests;
 			packageProductDependencies = (
-				C1FA20B12EEDC0F100CC79AD /* RxTest */,
-				C1FA20B42EEDC10D00CC79AD /* RxBlocking */,
-				C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */,
-				C1FA20B82EEDC25A00CC79AD /* Realm */,
 			);
 			productName = Capy4FunTests;
 			productReference = C1C66F762EE744FF00A7B2DD /* Capy4FunTests.xctest */;
@@ -229,12 +223,10 @@
 			mainGroup = C1C66F572EE744FD00A7B2DD;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */,
-				C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */,
-				C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
-				C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */,
+				C10D7DA62EF25D9000C4C7E0 /* XCLocalSwiftPackageReference "Modules/Core" */,
+				C10D7DA92EF25DA200C4C7E0 /* XCLocalSwiftPackageReference "Modules/Home" */,
+				C10D7DAC2EF25FD700C4C7E0 /* XCLocalSwiftPackageReference "Modules/Common" */,
+				C10D7DAF2EF263B900C4C7E0 /* XCLocalSwiftPackageReference "Modules/Detail" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1C66F612EE744FD00A7B2DD /* Products */;
@@ -265,23 +257,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C1463D022EE8773100DB9498 /* ShellScript */ = {
+		0DDA8A968F519E8D22441DE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Capy4FunTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFTLINT_EXECUTABLE=\"${BUILD_DIR%Build/*}SourcePackages/checkouts/SwiftLint/.build/release/swiftlint\"\n\n# Hanya jalankan linting jika executable ada.\nif [ -f \"$SWIFTLINT_EXECUTABLE\" ]; then\n  echo \"Running SwiftLint via SPM...\"\n  \"$SWIFTLINT_EXECUTABLE\"\nelse\n  echo \"warning: SwiftLint executable not found. Make sure the dependency is correctly added and the target has been built once.\"\n  exit 0\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F08C310BA9DD2D107A810228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Capy4Fun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -313,6 +331,7 @@
 /* Begin XCBuildConfiguration section */
 		C1C66F8A2EE744FF00A7B2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD8D2306C31D65CE765F59D /* Pods-Capy4Fun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +363,7 @@
 		};
 		C1C66F8B2EE744FF00A7B2DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D6CA910EE19D99E5FF8846F /* Pods-Capy4Fun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -432,6 +452,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -489,6 +510,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -496,6 +518,7 @@
 		};
 		C1C66F8F2EE744FF00A7B2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA6A87E562B3C75662A88AA /* Pods-Capy4FunTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +541,7 @@
 		};
 		C1C66F902EE744FF00A7B2DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39A2F0E9960C69B3E2F5115C /* Pods-Capy4FunTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -570,112 +594,41 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.10.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		C10D7DA62EF25D9000C4C7E0 /* XCLocalSwiftPackageReference "Modules/Core" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/Core;
 		};
-		C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.9.1;
-			};
+		C10D7DA92EF25DA200C4C7E0 /* XCLocalSwiftPackageReference "Modules/Home" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/Home;
 		};
-		C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.4;
-			};
+		C10D7DAC2EF25FD700C4C7E0 /* XCLocalSwiftPackageReference "Modules/Common" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/Common;
 		};
-		C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
-			};
+		C10D7DAF2EF263B900C4C7E0 /* XCLocalSwiftPackageReference "Modules/Detail" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/Detail;
 		};
-		C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C1536C2B2EEDCD9B0078BF48 /* Swinject */ = {
+		C10D7DA72EF25D9000C4C7E0 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1536C2A2EEDCD9B0078BF48 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
+			productName = Core;
 		};
-		C1FA209C2EEDA93D00CC79AD /* RxCocoa */ = {
+		C10D7DAA2EF25DA200C4C7E0 /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			productName = Home;
 		};
-		C1FA209E2EEDA93D00CC79AD /* RxSwift */ = {
+		C10D7DAD2EF25FD700C4C7E0 /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
+			productName = Common;
 		};
-		C1FA20A12EEDA94F00CC79AD /* SDWebImageSwiftUI */ = {
+		C10D7DB02EF263B900C4C7E0 /* Detail */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		C1FA20A42EEDA96000CC79AD /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA20A32EEDA96000CC79AD /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		C1FA20A72EEDA98800CC79AD /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-		C1FA20AD2EEDB38B00CC79AD /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA20AC2EEDB38B00CC79AD /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
-		};
-		C1FA20B12EEDC0F100CC79AD /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		C1FA20B42EEDC10D00CC79AD /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA209B2EEDA93D00CC79AD /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		C1FA20B62EEDC25000CC79AD /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA20A02EEDA94F00CC79AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		C1FA20B82EEDC25A00CC79AD /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C1FA20A62EEDA98800CC79AD /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
+			productName = Detail;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

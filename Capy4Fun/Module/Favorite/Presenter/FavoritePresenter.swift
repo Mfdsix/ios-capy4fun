@@ -5,6 +5,7 @@
 //  Created by Mputh on 09/12/25.
 //
 
+import Core
 import SwiftUI
 import RxSwift
 import Combine

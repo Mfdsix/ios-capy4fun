@@ -5,17 +5,20 @@
 //  Created by Mputh on 09/12/25.
 //
 
+import Core
+import Home
+import Detail
 import SwiftUI
 import Swinject
 
-class HomeRouter {
+final class HomeRouter: HomeRouting {
     
-    func makeDetailView(for capybara: CapybaraModel) -> some View {
+    func makeDetailView(for capybara: CapybaraModel) -> AnyView {
         let presenter = Injection.shared.container.resolve(
             DetailPresenter.self,
             argument: capybara
         )!
-        return DetailView(presenter: presenter)
+        return AnyView(DetailView(presenter: presenter))
     }
     
 }
